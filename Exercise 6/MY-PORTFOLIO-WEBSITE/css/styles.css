@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Base styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+/* Media query for tablets and smaller devices */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}
+
+/* GLOBAL STYLES */
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* HEADER STYLES */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 20px; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header > h1 {
+  margin: 0;
+  flex: 1; /* Allows the title to center */
+  text-align: center; /* Centers the title text */
+}
+
+/* HEADER NAVIGATION LINKS */
+header nav ul li a {
+  flex: 0 0 auto;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ccc;
+}
+
+/* HEADER LOGO IMAGE */
+header img {
+  flex: 0 0 auto;
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-right: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  flex: 0 0 auto;
+  margin-left: auto; /* Pushes the nav to the right */
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN CONTENT AREA */
+main {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 240px auto 20px auto;
+  /* Top margin for header height */
+  padding: 20px;
+  min-height: auto;
+  overflow-y: auto;
+  /* scrollbar if content exceeds height */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* MAIN CONTENT IMAGES */
+main img {
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* NAVIGATION STYLES */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* NAVIGATION LINKS */
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
+/* FOOTER STYLES */
+footer {
+  display: flex;
+  flex-direction: column; /* Stack flex items vertically */
+  justify-content: center;
+  align-items: center; /* This will now center the items horizontally since the direction is column */
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER IMAGES */
+footer img {
+  width: 40px;
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+}
+
+/* CALL-TO-ACTION BUTTON */
+.cta-button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* CTA BUTTON HOVER EFFECT */
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* FORM INTRODUCTION PARAGRAPH */
+.form-intro {
+  margin-top: 50px;
+}
+
+/* CONTACT FORM STYLES */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* CONTACT FORM FIELDS */
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* CONTACT FORM SUBMIT BUTTON */
+.contact-form input[type="submit"] {
+  width: auto;
+  margin: 20px 0;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* TABLE STYLES */
+/* for table */
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* TABLE CELL STYLES */
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* TABLE HEADER STYLES */
+thead th {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* TABLE ROW ZEBRA STRIPING */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* TABLE ROW HOVER EFFECT */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* SKILLS HEADING MARGIN */
+.skills-heading {
+  margin-top: 40px;
+  /* Adjust the value as needed */
+}
+
+.work-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensures the grid items fit the container */
+  grid-gap: 20px; /* Space between items */
+  justify-content: center; /* Centers the items in the grid */
+  align-items: start; /* Aligns items to the start of the container along the cross axis */
+  padding: 20px;
+  width: 100%; /* Ensures the grid takes up the full width */
+}
+
+.work-item {
+  position: relative; /* Allows absolute positioning inside the container */
+  background-color: #f5f5f5; /* Example background color */
+  border: 1px solid #ccc; /* Example border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 20px; /* Padding inside items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  text-align: center;
+}
+
+.project-svg {
+  position: relative;
+  top: 10%; /* Adjust as needed */
+  left: 0%;
+  transform: translateX(-50%); /* Center the SVG horizontally */
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  z-index: 10; /* Ensure it's on top */
+}
+
+.work-item h3 {
+  color: #333;
+  margin: 10px 0;
+}
+
+.work-item p {
+  font-size: 1.2em; /* Adjust as needed */
+  line-height: 1.4; /* Adjust for readability */
+  color: #666;
+}
+
+.work-link {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+  text-decoration: none; /* Removes underline from links */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions on hover */
+}
+
+.work-link:hover {
+  background-color: #555;
+  color: #ddd; /* Lighten the text color on hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.work-item:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+@keyframes rotateSvg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.project-svg {
+  animation: rotateSvg 8s linear infinite;
+}
