@@ -110,7 +110,7 @@ header img {
   width: 100px;
   height: auto;
   display: block;
-  margin-right: auto;
+  margin: 0 auto; 
   border-radius: 50%;
   box-shadow: var(--box-shadow);
 }
@@ -197,10 +197,7 @@ footer {
 footer img {
   width: 40px;
   height: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;  /* Shorthand for setting top and bottom margins to 0, left and right margins to auto */
   transition: transform 0.3s ease;
 }
 
@@ -385,4 +382,12 @@ tbody tr:hover {
 
 .project-svg {
   animation: rotateSvg 8s linear infinite;
+}
+
+.project-image {
+  width: 100%;           /* Makes the image responsive */
+  max-width: 300px;      /* Maximum width of the image */
+  height: auto;          /* Maintains the aspect ratio */
+  display: block;        /* Ensures the image doesn't have extra space below it */
+  margin: 0 auto;        /* Centers the image */
 }
