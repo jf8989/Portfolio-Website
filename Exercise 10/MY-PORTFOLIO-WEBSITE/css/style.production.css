@@ -1,0 +1,530 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+  /* Color scheme */       /* dark gray for text, headers, and other elements */     /* commonly used white color */ /* common background color for body and other elements */          /* default link color */    /* link hover color */     /* button hover background color */     /* background color for header */     /* background color for footer */       /* call to action button background color */      /* form submit button background color */        /* background color for boxes in main content */     /* table header background color */  /* zebra striping for tables */   /* hover background color for table rows */
+
+  /* Typography */ /* primary font family */
+  
+  /* Borders and Shadows */        /* commonly used border radius */ /* commonly used box shadow */
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Base styles */
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+/* Media query for tablets and smaller devices */
+@media (max-width: 768px) {
+  .grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}
+
+/* GLOBAL STYLES */
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* HEADER STYLES */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  z-index: 1000;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header > h1 {
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+/* HEADER NAVIGATION LINKS */
+header nav ul li a {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ccc;
+}
+
+/* HEADER LOGO IMAGE */
+header img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: auto;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN CONTENT AREA */
+main {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 240px auto 20px auto;
+  padding: 20px;
+  min-height: auto;
+  overflow-y: auto;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* MAIN CONTENT IMAGES */
+main img {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* NAVIGATION STYLES */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+/* NAVIGATION LINKS */
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+/* FOOTER STYLES */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER IMAGES */
+footer img {
+  width: 40px;
+  height: auto;
+  margin: 0 auto;  /* Shorthand for setting top and bottom margins to 0, left and right margins to auto */
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+footer img:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* CALL-TO-ACTION BUTTON */
+.cta-button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+/* CTA BUTTON HOVER EFFECT */
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* FORM INTRODUCTION PARAGRAPH */
+.form-intro {
+  margin-top: 50px;
+}
+
+/* CONTACT FORM STYLES */
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* CONTACT FORM FIELDS */
+.contact-form label {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+.contact-form input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+.contact-form button {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* CONTACT FORM SUBMIT BUTTON */
+.contact-form input[type="submit"] {
+  width: auto;
+  margin: 20px 0;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* TABLE STYLES */
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-collapse: collapse;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* TABLE CELL STYLES */
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* TABLE HEADER STYLES */
+thead th {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* TABLE ROW ZEBRA STRIPING */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* TABLE ROW HOVER EFFECT */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* SKILLS HEADING MARGIN */
+.skills-heading {
+  margin-top: 40px; /* Adjust the value as needed */
+}
+
+.work-examples {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensures the grid items fit the container */
+  grid-gap: 20px; /* Space between items */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Centers the items in the grid */
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start; /* Aligns items to the start of the container along the cross axis */
+  padding: 20px;
+  width: 100%; /* Ensures the grid takes up the full width */
+}
+
+.work-item {
+  position: relative; /* Allows absolute positioning inside the container */
+  background-color: #f5f5f5; /* Example background color */
+  border: 1px solid #ccc; /* Example border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding inside items */
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example shadow */
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Smooth transition for hover effect */
+  text-align: center;
+}
+
+.project-svg {
+  position:relative;
+  top: 10%; /* Adjust as needed */
+  left: 0%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%); /* Center the SVG horizontally */
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  z-index: 10; /* Ensure it's on top */
+}
+
+.work-item h3 {
+  color: #333;
+  margin: 10px 0;
+}
+
+.work-item p {
+  font-size: 1.2em; /* Adjust as needed */
+  line-height: 1.4; /* Adjust for readability */
+  color: #333; /* Changed from --link-hover-color to --primary-color */
+}
+
+.work-link {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none; /* Removes underline from links */
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease; /* Smooth transitions on hover */
+}
+
+.work-link:hover {
+  background-color: #555;
+  color: #ccc; /* Lighten the text color on hover */
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect on hover */
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05); /* Slightly enlarge the button on hover */
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+
+.work-item:hover {
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px); /* Slight lift effect on hover */
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+@-webkit-keyframes rotateSvg {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateSvg {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.project-svg {
+  -webkit-animation: rotateSvg 8s linear infinite;
+          animation: rotateSvg 8s linear infinite;
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.project-image {
+  width: 100%;           /* Makes the image responsive */
+  max-width: 300px;      /* Maximum width of the image */
+  height: auto;          /* Maintains the aspect ratio */
+  display: block;        /* Ensures the image doesn't have extra space below it */
+  margin: 0 auto;        /* Centers the image */
+}
